@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2023-05-19T12:00:14.843Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Z2Rude_abhVDAWsqFkSH" version="21.3.2" type="device">
+  <diagram name="Sayfa -1" id="b6itreuBYewDtTBlXLhI">
+    <mxGraphModel dx="1562" dy="829" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-1" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="50" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="160" y="10" width="640" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-3" value="Apk dosyasını yükle" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="330" y="40" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-4" value="Oyuna giriş yap" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="310" y="200" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-5" value="Oyunu sonlandır" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="230" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-6" value="Oyunu başlat" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="550" y="110" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-7" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-4" target="HIVfpcN_canTP5vQ4KEu-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-8" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-4" target="HIVfpcN_canTP5vQ4KEu-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-1" target="HIVfpcN_canTP5vQ4KEu-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-1" target="HIVfpcN_canTP5vQ4KEu-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-11" value="Oyunu oyna" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="310" y="330" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-13" value="Sonlandır" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="520" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-14" value="Tekrar oyna" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="400" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-15" value="Final" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="310" y="495" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-16" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-15" target="HIVfpcN_canTP5vQ4KEu-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-17" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-15" target="HIVfpcN_canTP5vQ4KEu-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-1" target="HIVfpcN_canTP5vQ4KEu-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="HIVfpcN_canTP5vQ4KEu-1" target="HIVfpcN_canTP5vQ4KEu-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="450" as="sourcePoint" />
+            <mxPoint x="600" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIVfpcN_canTP5vQ4KEu-21" value="YUVAMI BUL" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="10" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
