@@ -35,13 +35,13 @@ public class Player_Script : MonoBehaviour
         if (player_Oldu)
             return;
 
-        if (Input.GetAxisRaw("Horizontal") > 0)
+        if (Input.GetAxisRaw("Horizontal") > 0)//hareket sýfýrdan büyükse
         {
 
             Maymun.velocity = new Vector2(move_Speed, Maymun.velocity.y);
 
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0)
+        else if (Input.GetAxisRaw("Horizontal") < 0)//hareket sýfýrdan küçük ise
         {
 
             Maymun.velocity = new Vector2(-move_Speed, Maymun.velocity.y);
@@ -53,7 +53,7 @@ public class Player_Script : MonoBehaviour
     void OnTriggerEnter2D(Collider2D target)
     {
 
-        if (player_Oldu)
+        if (player_Oldu)// maymun kaybederse return ile method ignore et
             return;
 
         if (target.tag == "extra_Itme")
@@ -68,7 +68,7 @@ public class Player_Script : MonoBehaviour
 
                 target.gameObject.SetActive(false);
 
-            //    SoundManager.instance.JumpSoundFX();
+                Ses_Yonetim.instance.JumpSoundFX();
 
                 // ilk itme nedeniyle trigger giriþinden çýkýþ
                 return;
@@ -78,7 +78,7 @@ public class Player_Script : MonoBehaviour
 
         } 
 
-        if (target.tag == "NormalPush")
+        if (target.tag == "NormalItme")
         {
 
             Maymun.velocity = new Vector2(Maymun.velocity.x, normal_Itme);
@@ -87,7 +87,7 @@ public class Player_Script : MonoBehaviour
 
             Itme_Sayisi++;
 
-            //SoundManager.instance.JumpSoundFX();
+            Ses_Yonetim.instance.JumpSoundFX();
 
         }
 
@@ -100,7 +100,7 @@ public class Player_Script : MonoBehaviour
 
             Itme_Sayisi++;
 
-            //SoundManager.instance.JumpSoundFX();//zýplama sesi
+            Ses_Yonetim.instance.JumpSoundFX();//zýplama sesi
 
         }
 
@@ -108,18 +108,30 @@ public class Player_Script : MonoBehaviour
         {
 
             Itme_Sayisi = 0;
-            //PlatformSpawner.instance.SpawnPlatforms();
+            PlatformSpawner.instance.SpawnPlatforms();
 
         }
 
-        if (target.tag == "FallDown" || target.tag == "Bird")
+        if (target.tag == "MaymunDustu" || target.tag == "Bird")
         {
 
-            player_Oldu = true;
+            player_Oldu = true;//maymun düþtü
 
-            //SoundManager.instance.GameOverSoundFX();
+            Ses_Yonetim.instance.GameOverSoundFX();
 
-            //GameManager.instance.RestartGame();
+            Yonetim.instance.RestartGame();
+        }
+
+
+
+        if (target.tag == "Kazandýn" || target.tag == "Puan kontrol")
+        {
+
+            //colider ile temas ve puan kontrolü kazandýn paneli açýlmasý
+
+            Ses_Yonetim.instance.GameOverSoundFX();
+
+            Yonetim.instance.RestartGame();
         }
 
     } // on trigger enter

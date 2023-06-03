@@ -6,6 +6,10 @@ TagManager:
   tags:
   - extra_Itme
   - BG
+  - NormalItme
+  - Platform
+  - Yanlis_Kutu
+  - MaymunDustu
   layers:
   - Default
   - TransparentFX

@@ -9,11 +9,11 @@ public class PlatformSpawner : MonoBehaviour
     [SerializeField]
     private GameObject left_Platform, right_Platform;
 
-    private float left_X_Min = 4.3f, left_X_Max = -2.4f, right_X_Min = 4.22f, right_X_Max = 3.7f;//platformun  x spawn koordinatlarý
+    private float sag_X_Min = -4.26f, sag_X_Max = -2.89f, sol_X_Min = 4.26f, sol_X_Max = 2.78f;//platformun  x spawn koordinatlarý
     private float y_Treshold = 2.6f;//platformun  y spawn koordinatlarý
     private float last_Y;
 
-    public int spawn_Count = 8;
+    public int spawn_Count = 16;
     private int platform_Spawned;
 
     [SerializeField]
@@ -45,7 +45,7 @@ public class PlatformSpawner : MonoBehaviour
         Vector2 temp = Vector2.zero;
         GameObject newPlatform = null;
 
-        for (int i = 0; i < spawn_Count; i++)
+        for (int i = 0; i <spawn_Count; i++)
         {
 
             temp.y = last_Y;
@@ -54,7 +54,7 @@ public class PlatformSpawner : MonoBehaviour
             if ((platform_Spawned % 2) == 0)
             {
 
-                temp.x = Random.Range(left_X_Min, left_X_Max);// x spawn aralýklarý rastgele
+                temp.x = Random.Range(sag_X_Min, sag_X_Max);//sað spawn aralýklarý rastgele
 
                 newPlatform = Instantiate(right_Platform, temp, Quaternion.identity);
 
@@ -63,7 +63,7 @@ public class PlatformSpawner : MonoBehaviour
             {
                 // if we have odd number
 
-                temp.x = Random.Range(right_X_Min, right_X_Max);// x spawn aralýklarý rastgele 
+                temp.x = Random.Range(sol_X_Min, sol_X_Max);// sol spawn aralýklarý rastgele 
 
                 newPlatform = Instantiate(left_Platform, temp, Quaternion.identity);
 
