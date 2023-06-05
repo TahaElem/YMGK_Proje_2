@@ -76,7 +76,7 @@ public class PlatformSpawner : MonoBehaviour
 
         }
 
-        if (Random.Range(0, 2) > 0)
+        if (Random.Range(0, 2) > 0)//%50 ihitmalle hatalý kutu açýlacak 
         {
             SpawnBird();
         }

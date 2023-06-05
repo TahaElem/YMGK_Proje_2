@@ -35,13 +35,13 @@ public class Player_Script : MonoBehaviour
         if (player_Oldu)
             return;
 
-        if (Input.GetAxisRaw("Horizontal") > 0)//hareket sýfýrdan büyükse
+        if (SimpleInput.GetAxisRaw("Horizontal") > 0)//hareket sýfýrdan büyükse
         {
 
             Maymun.velocity = new Vector2(move_Speed, Maymun.velocity.y);
 
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0)//hareket sýfýrdan küçük ise
+        else if (SimpleInput.GetAxisRaw("Horizontal") < 0)//hareket sýfýrdan küçük ise
         {
 
             Maymun.velocity = new Vector2(-move_Speed, Maymun.velocity.y);
@@ -112,7 +112,7 @@ public class Player_Script : MonoBehaviour
 
         }
 
-        if (target.tag == "MaymunDustu" || target.tag == "Bird")
+        if (target.tag == "MaymunDustu" || target.tag == "Yanlis_Kutu")
         {
 
             player_Oldu = true;//maymun düþtü
@@ -131,7 +131,7 @@ public class Player_Script : MonoBehaviour
 
             Ses_Yonetim.instance.GameOverSoundFX();
 
-            Yonetim.instance.RestartGame();
+            Yonetim.instance.RestartGame();//kaybet panel gelecek.
         }
 
     } // on trigger enter
