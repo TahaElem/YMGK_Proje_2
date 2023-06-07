@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player_Script : MonoBehaviour
 {
@@ -16,10 +17,19 @@ public class Player_Script : MonoBehaviour
     private int Itme_Sayisi;
 
     private bool player_Oldu;
+    public GameObject kazandin_pnl;
+    public TextMeshProUGUI hatali_txt;
+    public int can = 10;
+    public TextMeshProUGUI Puan_txt;
+    public int puan = 0;
 
     void Awake()//ilk çalýþacak kod
     {
         Maymun = GetComponent<Rigidbody2D>();//fizik iþlemleri için
+        can = 10;
+        hatali_txt.text = "X : " + can;
+        puan = 0;
+        Puan_txt.text = "Puan : " + puan + " /100";
 
     }
 
@@ -81,6 +91,9 @@ public class Player_Script : MonoBehaviour
         if (target.tag == "NormalItme")
         {
 
+            puan += 3;
+            Puan_txt.text = "Puan : " + puan + " /100";
+
             Maymun.velocity = new Vector2(Maymun.velocity.x, normal_Itme);
 
             target.gameObject.SetActive(false);
@@ -93,6 +106,9 @@ public class Player_Script : MonoBehaviour
 
         if (target.tag == "extra_Itme")
         {
+
+            puan += 5;
+            Puan_txt.text = "Puan : " + puan + " /100";
 
             Maymun.velocity = new Vector2(Maymun.velocity.x, extra_Itme);
 
@@ -112,26 +128,42 @@ public class Player_Script : MonoBehaviour
 
         }
 
+        //can konrolü
+        if (target.tag == "Yanlis_Kutu")
+        {
+            can--;
+            hatali_txt.text = "X : " + can;
+        }
+
         if (target.tag == "MaymunDustu" || target.tag == "Yanlis_Kutu")
         {
-
-            player_Oldu = true;//maymun düþtü
-
             Ses_Yonetim.instance.GameOverSoundFX();
 
-            Yonetim.instance.RestartGame();
+            if (can==0)
+            {
+                player_Oldu = true;//maymun düþtü
+                Yonetim.instance.RestartGame();
+            }
+
+            
+
+            
+
+         
         }
 
 
 
-        if (target.tag == "Kazandýn" || target.tag == "Puan kontrol")
+        if (puan>=100)//(target.tag == "Kazandýn" || target.tag == "Puan kontrol")
         {
+            
+            kazandin_pnl.SetActive(true);
+            Time.timeScale = 0;
+            ////colider ile temas ve puan kontrolü kazandýn paneli açýlmasý
 
-            //colider ile temas ve puan kontrolü kazandýn paneli açýlmasý
+            //Ses_Yonetim.instance.GameOverSoundFX();
 
-            Ses_Yonetim.instance.GameOverSoundFX();
-
-            Yonetim.instance.RestartGame();//kaybet panel gelecek.
+            //Yonetim.instance.RestartGame();//kaybet panel gelecek.
         }
 
     } // on trigger enter
