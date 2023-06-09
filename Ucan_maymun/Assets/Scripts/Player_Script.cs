@@ -129,13 +129,13 @@ public class Player_Script : MonoBehaviour
         }
 
         //can konrolü
-        if (target.tag == "Yanlis_Kutu")
+        if (target.tag == "Yanlis_Kutu")//
         {
             can--;
             hatali_txt.text = "X : " + can;
         }
 
-        if (target.tag == "MaymunDustu" || target.tag == "Yanlis_Kutu")
+        if ( target.tag == "Yanlis_Kutu")
         {
             Ses_Yonetim.instance.GameOverSoundFX();
 
@@ -144,13 +144,27 @@ public class Player_Script : MonoBehaviour
                 player_Oldu = true;//maymun düþtü
                 Yonetim.instance.RestartGame();
             }
+                     
 
-            
-
-            
-
-         
+                   
         }
+
+        if (target.tag == "MaymunDustu" )// maymun düþerse hemen ölsün
+        {
+            Ses_Yonetim.instance.GameOverSoundFX();
+
+            
+                player_Oldu = true;//maymun düþtü
+                Yonetim.instance.RestartGame();
+            
+
+
+
+
+
+
+        }
+
 
 
 
