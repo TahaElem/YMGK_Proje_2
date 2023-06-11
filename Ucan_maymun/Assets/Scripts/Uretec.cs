@@ -13,8 +13,9 @@ public class Uretec : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    void Awake ()
     {
+       // Time.timeScale = 1;
         sayi = Uret();
         Debug.Log(sayi);
      Debug.Log((sayi/100)*100);
@@ -22,6 +23,7 @@ public class Uretec : MonoBehaviour
         Debug.Log(yuzluk_Yuvarla(sayi));
         Debug.Log(binlik_Yuvarla(sayi));
         //yuzluk_txt.text = yuzluk_Yuvarla(sayi).ToString();
+        
 
     }
 

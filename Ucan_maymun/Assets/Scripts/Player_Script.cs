@@ -18,10 +18,15 @@ public class Player_Script : MonoBehaviour
 
     private bool player_Oldu;
     public GameObject kazandin_pnl;
+    public GameObject kaybettin_pnl;
+    public AudioSource bg_music;    
+    public AudioSource kazandin_music_pnl;
+    public AudioSource kaybettin_music_pnl;
     public TextMeshProUGUI hatali_txt;
     public int can = 10;
     public TextMeshProUGUI Puan_txt;
     public int puan = 0;
+   
 
     void Awake()//ilk çalýþacak kod
     {
@@ -30,6 +35,7 @@ public class Player_Script : MonoBehaviour
         hatali_txt.text = "X : " + can;
         puan = 0;
         Puan_txt.text = "Puan : " + puan + " /100";
+        
 
     }
 
@@ -142,7 +148,10 @@ public class Player_Script : MonoBehaviour
             if (can==0)
             {
                 player_Oldu = true;//maymun düþtü
-                Yonetim.instance.RestartGame();
+                kaybettin_pnl.SetActive(true);
+               bg_music.Stop();
+               kaybettin_music_pnl.Play();
+               //instance.RestartGame();
             }
                      
 
@@ -155,8 +164,12 @@ public class Player_Script : MonoBehaviour
 
             
                 player_Oldu = true;//maymun düþtü
-                Yonetim.instance.RestartGame();
-            
+            kaybettin_pnl.SetActive(true);
+            bg_music.Stop();
+            kaybettin_music_pnl.Play();
+
+            //Yonetim.instance.RestartGame();
+
 
 
 
@@ -173,11 +186,9 @@ public class Player_Script : MonoBehaviour
             
             kazandin_pnl.SetActive(true);
             Time.timeScale = 0;
-            ////colider ile temas ve puan kontrolü kazandýn paneli açýlmasý
-
-            //Ses_Yonetim.instance.GameOverSoundFX();
-
-            //Yonetim.instance.RestartGame();//kaybet panel gelecek.
+            
+          bg_music.Stop();
+          kazandin_music_pnl.Play();
         }
 
     } // on trigger enter

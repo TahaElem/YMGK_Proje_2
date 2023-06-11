@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   one_Banana: {fileID: 1984299471948532774, guid: 188d6ea9d8549dd47a2408cf3fc083aa, type: 3}
-  bananas: {fileID: 258879042606891254, guid: 7d1f87b91db1e0e47b375cfa39888506, type: 3}
+  bananas: {fileID: 258879042606891254, guid: b7265920230c66246b049b528d50d4e6, type: 3}
   spawn_Point: {fileID: 3141955341861565286}
 --- !u!1 &7330377778166066219
 GameObject:

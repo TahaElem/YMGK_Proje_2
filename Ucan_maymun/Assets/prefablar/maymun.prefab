@@ -147,3 +147,12 @@ MonoBehaviour:
   move_Speed: 2
   normal_Itme: 10
   extra_Itme: 14
+  kazandin_pnl: {fileID: 0}
+  kaybettin_pnl: {fileID: 0}
+  bg_music: {fileID: 0}
+  kazandin_music_pnl: {fileID: 0}
+  kaybettin_music_pnl: {fileID: 0}
+  hatali_txt: {fileID: 0}
+  can: 10
+  Puan_txt: {fileID: 0}
+  puan: 0

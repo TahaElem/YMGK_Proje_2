@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Yonetim : MonoBehaviour
 {
     public static Yonetim instance;
     public GameObject Bilgi_panel;
+    public AudioSource bg_music;
+    public AudioSource bg_music_pnl;
+    public AudioSource kazandin_music_pnl;
+    public AudioSource kaybettin_music_pnl;
 
     //sahne geçiþleri bu scriptten kontrol edilecek
 
@@ -13,7 +18,11 @@ public class Yonetim : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-        Time.timeScale = 0;
+        if (SceneManager.GetActiveScene().buildIndex!=0)
+        {
+            Time.timeScale = 0;
+        }
+       
     }
 
     public void RestartGame()
@@ -23,7 +32,7 @@ public class Yonetim : MonoBehaviour
 
     void LoadGameplay()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Gameplay");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex );
     }
 
     public void Next_Game()
@@ -61,7 +70,9 @@ public class Yonetim : MonoBehaviour
 
     public void Oyna()
     {
+        bg_music_pnl.Stop();
         Invoke("Play", 0.0f);
+        bg_music.Play();
     }
 
     void Play()
