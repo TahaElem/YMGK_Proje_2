@@ -22,6 +22,10 @@ public class Yonetim : MonoBehaviour
         {
             Time.timeScale = 0;
         }
+        else if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Time.timeScale = 1;
+        }
        
     }
 
@@ -65,7 +69,7 @@ public class Yonetim : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);//Ana menuye geri dön
 
-
+        Time.timeScale = 1;
     }
 
     public void Oyna()

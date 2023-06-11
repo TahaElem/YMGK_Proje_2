@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlatformScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     [SerializeField]
     private GameObject one_Banana, bananas;
 
     [SerializeField]
     private Transform spawn_Point;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
 
